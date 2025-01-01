@@ -66,7 +66,7 @@ const Home = () => {
             <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
               <div className="bg-white dark:bg-gray-800 rounded-lg p-8 max-w-lg w-full">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Contact Me</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Phone: +1234567890</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Phone: +919465247838</p>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">Email: devgarg1302@gmail.com</p>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-4 text-left">
