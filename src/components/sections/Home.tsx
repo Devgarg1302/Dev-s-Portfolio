@@ -23,7 +23,7 @@ const Home = () => {
     setShowModal(false);
     axios.post('https://adorable-golden-toque.glitch.me/save', formData)
       .then(() => {
-        console.log('Form submitted successfully:');
+        alert('Form submitted successfully');
       })
       .catch(error => {
         alert('There was an error submitting the form: ' + error.message);
