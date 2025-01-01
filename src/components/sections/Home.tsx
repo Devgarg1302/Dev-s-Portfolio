@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import Type from './Type';
 import './Home.css';
 import { useInView } from 'react-intersection-observer';
+import dev from '../../Assets/images/Dev-removebg-preview.png';
 
 const Home = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.5 });
@@ -39,7 +40,7 @@ const Home = () => {
       <div className='mr-32'>
           <img
             ref={ref}
-            src="../src/Assets/images/Dev-removebg-preview.png"
+            src={dev}
             alt="Dev Inder Garg"
             className={`w-9/12 h-9/12 rounded-full mx-auto mt-8 ${inView? 'animate-fadeIn animate-delay-400':''}`}
           />
