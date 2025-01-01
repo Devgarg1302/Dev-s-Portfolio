@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import dev from '../../Assets/images/Dev-removebg-preview.png';
 import { useState } from 'react';
 import axios from 'axios';
+import bg from '../../Assets/images/bg.jpeg';
+import { useTheme } from '../../context/ThemeContext';
 
 const Home = () => {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.5 });
@@ -12,6 +14,7 @@ const Home = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const { theme } = useTheme();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,7 +34,7 @@ const Home = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-around bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="home" className="min-h-screen flex items-center justify-around bg-cover bg-no-repeat bg-center from-gray-50 to-gray-100 dark:bg-gray-800" style={{ backgroundImage: theme === 'light' ? `url(${bg})`: '' ,backgroundColor: theme === 'light' ? 'rgba(255, 255, 255, 0.7)': '', backgroundBlendMode: theme === 'light' ? 'overlay': ''}}>
       <div className="max-w-7xl ml-32 px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 ref={ref} className={`text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 ${inView ? 'animate-fadeIn' : ''}`}>

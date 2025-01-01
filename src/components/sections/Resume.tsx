@@ -5,7 +5,7 @@ import { experience, education } from '../../data/resume';
 
 export const Resume = () => {
   return (
-    <section id="resume" className="py-20 bg-white dark:bg-gray-900 transition-colors">
+    <section id="resume" className="py-20 dark:bg-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ResumeHeader />
         <ResumeViewer />
