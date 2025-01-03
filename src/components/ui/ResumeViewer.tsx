@@ -1,6 +1,6 @@
 import { useState} from 'react';
 import { Download, ExternalLink } from 'lucide-react';
-import pdf from '../../data/Dev_Inder_Garg.pdf';
+import pdf from '../../data/Dev_Inder_Garg_Resume.pdf';
 export const ResumeViewer = () => {
   const [showPdf, setShowPdf] = useState(false);
   
